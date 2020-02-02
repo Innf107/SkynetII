@@ -1,0 +1,23 @@
+button {
+    border: 0
+}
+
+
+.buttonOn{
+    background-color: greenyellow;
+}
+.buttonOn:hover{
+    background-color: rgb(143, 212, 40);
+}
+.buttonOn:active{
+    background-color: rgb(126, 185, 36);
+}
+.buttonOff{
+    background-color: gray;
+}
+.buttonOff:hover{
+    background-color: rgb(102, 102, 102);
+}
+.buttonOff:active{
+    background-color: rgb(75, 75, 75);
+}
