@@ -29,9 +29,9 @@ const settings = {
 client.on('ready', () => console.log('SkynetII is ready!'))
 
 
-const token = fs.read('/skynetToken')
+const token = fs.read('/skynetToken').trim()
 
-client.login(token)
+client.login(token).catch(r => console.error(`could not login because: ${r}`))
 
 app.listen(PORT, () => console.log(`listening on Port ${PORT}`))
 

@@ -64,8 +64,8 @@ var settings = {
     "chirping": false
 };
 client.on('ready', function () { return console.log('SkynetII is ready!'); });
-var token = fs.read('/skynetToken');
-client.login(token);
+var token = fs.read('/skynetToken').trim();
+client.login(token)["catch"](function (r) { return console.error("could not login because: " + r); });
 app.listen(PORT, function () { return console.log("listening on Port " + PORT); });
 //rainbow
 var hue = 0;
