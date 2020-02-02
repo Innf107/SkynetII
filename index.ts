@@ -28,7 +28,11 @@ const settings = {
 
 client.on('ready', () => console.log('SkynetII is ready!'))
 
-client.login('NjQ4MTM5NDczMDMyNDQ1OTcz.Xdp4-A.t6mQYuhmtFcdlSvXHlDZfpraCxI')
+
+const token = fs.read('/skynetToken')
+
+client.login(token)
+
 app.listen(PORT, () => console.log(`listening on Port ${PORT}`))
 
 //rainbow
